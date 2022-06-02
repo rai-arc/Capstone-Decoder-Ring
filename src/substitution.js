@@ -11,6 +11,7 @@ const substitutionModule = (function () {
   function substitution(input, alphabet, encode = true) {
     if (!alphabet) return false;
     if (alphabet.length !== 26) return false;
+    alphabet = alphabet.toLowerCase()
     for (let i = 0; i < alphabet.length; i++) {
       for (let j = i + 1; j < alphabet.length; j++) {
         if (alphabet[i] === alphabet[j]) {
